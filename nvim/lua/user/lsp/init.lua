@@ -21,7 +21,6 @@ local opts = {
 
 require'lspconfig'.clangd.setup(opts)
 -- require'lspconfig'.jedi_language_server.setup(opts)
-require'lspconfig'.marksman.setup(opts)
 require'lspconfig'.cssls.setup (opts)
 require'lspconfig'.emmet_ls.setup({
     opts,

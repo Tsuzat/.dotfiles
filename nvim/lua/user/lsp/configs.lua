@@ -12,6 +12,7 @@ local servers = {
     "cssls",
     "emmet_ls",
     "pyright",
+    "marksman",
 }
 
 lsp_installer.setup({
