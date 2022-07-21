@@ -25,11 +25,34 @@ onedarkpro.setup({
         italic = true, -- Use the themes opinionated italic styles?
         undercurl = true, -- Use the themes opinionated undercurl styles?
         cursorline = true, -- Use cursorline highlighting?
-        transparency = true, -- Use a transparent background?
+        transparency = false, -- Use a transparent background?
         terminal_colors = true, -- Use the theme's colors for Neovim's :terminal?
         window_unfocussed_color = false, -- When the window is out of focus, change the normal background?
     }
 })
 
-vim.cmd("colorscheme onedarkpro")
+vim.cmd [[
+    try
+        colorscheme onedarkpro
+    catch /^Vim\%((\a\+)\)\=:E185/
+        colorscheme default
+        set background=dark
+    endtry
+]]
+
+
+-- Recommended Setting for transparent experience
+-- vim.cmd [[
+--     try
+--         colorscheme onedarkpro
+--     catch /^Vim\%((\a\+)\)\=:E185/
+--         colorscheme default
+--         set background=dark
+--     endtry
+--         highlight FloatBorder guibg=NONE ctermbg=NONE  " Removes the border of float menu (LSP and Autocompletion uses it)
+--         highlight link NormalFloat Normal 
+--         highlight NormalFloat ctermbg=BLACK ctermfg=NONE guibg=NONE guifg=NONE 
+--         highlight Pmenu ctermbg=NONE guibg=NONE 
+-- ]]
+
 
