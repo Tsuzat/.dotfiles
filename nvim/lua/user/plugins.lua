@@ -64,8 +64,8 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use("lunarvim/darkplus.nvim")
     use("sainnhe/gruvbox-material")
-    use("catppuccin/nvim")
     use("olimorris/onedarkpro.nvim")
+    use("navarasu/onedark.nvim")
 
 	-- cmp plugins
 	use( "hrsh7th/nvim-cmp" ) -- The completion plugin

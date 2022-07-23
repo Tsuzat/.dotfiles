@@ -23,7 +23,7 @@ vim.cmd [[
     endtry
         highlight FloatBorder guibg=NONE ctermbg=NONE  " Removes the border of float menu (LSP and Autocompletion uses it)
         highlight link NormalFloat Normal 
-        highlight NormalFloat ctermbg=BLACK ctermfg=NONE guibg=NONE guifg=NONE 
+        highlight NormalFloat ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE 
         highlight Pmenu ctermbg=NONE guibg=NONE 
 ]]
 
