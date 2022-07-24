@@ -20,6 +20,10 @@ System
 ![Starter](./images/starter_gruvbox "Starter")
 ![Features](./images/gruvbox "Features")
 
+#### Atom's iconic onedark
+![Starter](./images/starter_onedark "Starter")
+![Starter](./images/onedark "Features")
+
 #### Onedarkpro
 ![Starter](./images/starter_onedarkerpro "Starter")
 ![Features](./images/onedarkerpro "Features")
