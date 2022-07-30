@@ -12,7 +12,7 @@ vim.g.gruvbox_material_transparent_background = 1 -- 0, 1 or 2
 vim.g.gruvbox_material_diagnostic_text_highlight = 1 -- 0 or 1
 vim.g.gruvbox_material_diagnostic_virtual_text = 'colored' --grey or colored
 vim.g.gruvbox_material_current_word = 'italic' -- bold, underline, italic, grey
-vim.g.gruvbox_material_statusline_style = 'default' -- default, mix, original
+vim.g.gruvbox_material_statusline_style = 'original' -- default, mix, original
 
 vim.cmd [[
     try
