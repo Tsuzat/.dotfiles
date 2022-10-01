@@ -1,0 +1,7 @@
+require "tsuzat.core.nvim-tree"
+require "tsuzat.core.lualine"
+require "tsuzat.core.indentline"
+require "tsuzat.core.bufferline"
+require "tsuzat.core.telescope"
+require "tsuzat.core.alpha"
+require "tsuzat.core.which-key"
