@@ -1,5 +1,5 @@
 local keymap = vim.keymap.set
---[[ local status, saga = pcall(require, "lspsaga")
+local status, saga = pcall(require, "lspsaga")
 
 if not status then
   return
@@ -7,21 +7,11 @@ end
 
 saga.init_lsp_saga({
   border_style = "rounded",
-  max_preview_lines = 20,
-  code_action_icon = "💡",
-  -- if true can press number to execute the codeaction in codeaction window
-  code_action_num_shortcut = true,
-  -- same as nvim-lightbulb but async
+  max_preview_lines = 15,
   code_action_lightbulb = {
-    enable = true,
-    enable_in_insert = true,
-    cache_code_action = true,
-    sign = true,
-    update_time = 150,
-    sign_priority = 20,
-    virtual_text = true,
+    sign = false,
   },
-}) ]]
+})
 
 -- use <C-t> to jump back
 keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })

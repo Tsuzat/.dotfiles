@@ -46,7 +46,7 @@ return packer.startup(function(use)
   use("folke/which-key.nvim")
 
   -- Themes
-  use("~/Projects/NeoSolarized.nvim") -- or use ("Tsuzat/NeoSolarized.nvim")
+  use("~/Projects/Personal/NeoSolarized.nvim") -- or use ("Tsuzat/NeoSolarized.nvim")
   use("sainnhe/gruvbox-material")
 
   -- UI Related Plugins
@@ -80,7 +80,7 @@ return packer.startup(function(use)
   use("ray-x/lsp_signature.nvim") -- LSP signature hint as you type
   use({
     "glepnir/lspsaga.nvim",
-    branch = "main",
+    --[[ branch = "main",
     config = function()
       local saga = require("lspsaga")
       saga.init_lsp_saga({
@@ -90,7 +90,7 @@ return packer.startup(function(use)
           sign = false,
         },
       })
-    end,
+    end, ]]
   })
 
   -- Flutter Tools
