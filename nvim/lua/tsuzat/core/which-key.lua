@@ -169,7 +169,7 @@ local mappings = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", "Format" },
+    f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
     j = {
@@ -189,6 +189,10 @@ local mappings = {
       "Workspace Symbols",
     },
     e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
+  },
+  o = {
+    name = "others",
+    b = { "<cmd>!black --fast -q % <cr><cr>", "Format Python" }
   },
   s = {
     name = "Search",
