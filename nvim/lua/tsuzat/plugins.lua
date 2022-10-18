@@ -78,27 +78,14 @@ return packer.startup(function(use)
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
   use("ray-x/lsp_signature.nvim") -- LSP signature hint as you type
-  use({
-    "glepnir/lspsaga.nvim",
-    --[[ branch = "main",
-    config = function()
-      local saga = require("lspsaga")
-      saga.init_lsp_saga({
-        border_style = "rounded",
-        max_preview_lines = 15,
-        code_action_lightbulb = {
-          sign = false,
-        },
-      })
-    end, ]]
-  })
+  use("glepnir/lspsaga.nvim")
 
   -- Flutter Tools
   use("akinsho/flutter-tools.nvim")
 
-  -- Code Formatter TODO
-  use("MunifTanjim/prettier.nvim")
-  use("jose-elias-alvarez/null-ls.nvim")
+  -- Code Formatter
+  --[[ use("MunifTanjim/prettier.nvim") ]]
+  --[[ use("jose-elias-alvarez/null-ls.nvim") ]]
 
   -- Snippet Providers
   use("L3MON4D3/LuaSnip")
