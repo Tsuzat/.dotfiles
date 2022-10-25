@@ -46,7 +46,7 @@ return packer.startup(function(use)
   use("folke/which-key.nvim")
 
   -- Themes
-  use("~/Projects/Personal/NeoSolarized") -- or use ("Tsuzat/NeoSolarized.nvim")
+  use("~/Projects/Personal/NeoSolarized.nvim") -- or use ("Tsuzat/NeoSolarized.nvim")
   use("sainnhe/gruvbox-material")
 
   -- UI Related Plugins
