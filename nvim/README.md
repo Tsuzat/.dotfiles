@@ -25,8 +25,8 @@ System
 - Terminal Emulator [Kitty](https://github.com/kovidgoyal/kitty)
 - Shell : Fish
 
+#### [NeoSolarized](https://github.com/Tsuzat/NeoSolarized.nvim)
+![Screenshot_3](https://user-images.githubusercontent.com/70003855/197829866-dd67003b-091c-46c4-9e81-15b4121825d4.png)
+
 #### gruvbox-material
 ![gruvbox-material](../images/s2.png)
-
-#### [NeoSolarized](https://github.com/Tsuzat/NeoSolarized.nvim)
-![gruvbox-material](../images/s1.png)
