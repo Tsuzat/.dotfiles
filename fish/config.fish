@@ -191,6 +191,7 @@ alias lg="lazygit"
 alias gi="git init"
 alias g="git"
 alias cpgitpat="xclip -selection clipboard < ~/Development/Token/.gitpat"
+alias :q="exit"
 
 # Custom function
 function pyProject
@@ -202,4 +203,8 @@ function pyProject
         echo "Wrong parameters"
         echo "--> pyProject dir_name env_name"
     end
+end
+
+function pyEnv
+    python -m venv $argv[1] && source ./$argv[1]/bin/activate.fish
 end
