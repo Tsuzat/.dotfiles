@@ -74,8 +74,8 @@ lualine.setup {
   sections = {
     lualine_a = { 'mode', diagnostics },
     lualine_b = { 'branch', treesitter },
-    lualine_c = { lsp, diff },
-    lualine_x = { "filetype" },
+    lualine_c = { diff },
+    lualine_x = { lsp, "filetype" },
     lualine_y = { 'progress' },
     lualine_z = { 'location' }
   },

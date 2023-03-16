@@ -5,11 +5,11 @@ end
 
 bufferline.setup {
   options = {
-    numbers = "none", -- can be "none" | "ordinal" | "buffer_id" | "both" | function
-    close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+    numbers = "none",                        -- can be "none" | "ordinal" | "buffer_id" | "both" | function
+    close_command = "Bdelete! %d",           -- can be a string | function, see "Mouse actions"
     right_mouse_command = "vert sbuffer %d", -- can be a string | function, see "Mouse actions"
-    left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
-    middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
+    left_mouse_command = "buffer %d",        -- can be a string | function, see "Mouse actions"
+    middle_mouse_command = nil,              -- can be a string | function, see "Mouse actions"
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
@@ -30,7 +30,7 @@ bufferline.setup {
     max_name_length = 18,
     max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
     tab_size = 18,
-    diagnostics = false, -- "nvim_lsp"
+    diagnostics = false,    -- "nvim_lsp"
     diagnostics_update_in_insert = false,
     offsets = {
       {
@@ -79,7 +79,6 @@ bufferline.setup {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
     },
-
     -- buffer_selected = {
     --   fg = {attribute='fg',highlight='#ff0000'},
     --   bg = {attribute='bg',highlight='#0000ff'},
@@ -89,7 +88,6 @@ bufferline.setup {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
     },
-
     close_button = {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
@@ -116,7 +114,6 @@ bufferline.setup {
       fg = { attribute = "fg", highlight = "TabLineSel" },
       bg = { attribute = "bg", highlight = "Normal" },
     },
-
     duplicate_selected = {
       fg = { attribute = "fg", highlight = "TabLineSel" },
       bg = { attribute = "bg", highlight = "TabLineSel" },
@@ -132,7 +129,6 @@ bufferline.setup {
       bg = { attribute = "bg", highlight = "TabLine" },
       italic = true,
     },
-
     modified = {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
@@ -145,7 +141,6 @@ bufferline.setup {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
     },
-
     separator = {
       fg = { attribute = "bg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },

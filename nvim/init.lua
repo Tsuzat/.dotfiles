@@ -1,4 +1,4 @@
-require "tsuzat.plugins"
+require "tsuzat.lazy"
 require "tsuzat.options"
 require "tsuzat.themes"
 require "tsuzat.mappings"

@@ -5,11 +5,36 @@ if not status then
   return
 end
 
-saga.init_lsp_saga({
-  border_style = "rounded",
-  max_preview_lines = 15,
-  code_action_lightbulb = {
+saga.setup({
+  preview = {
+    lines_above = 0,
+    lines_below = 10,
+  },
+  scroll_preview = {
+    scroll_down = '<C-f>',
+    scroll_up = '<C-b>',
+  },
+  request_timeout = 2000,
+  code_action = {
+    num_shortcut = true,
+    keys = {
+      -- string |table type
+      quit = 'q',
+      exec = '<CR>',
+    },
+  },
+  lightbulb = {
+    enable = true,
+    enable_in_insert = true,
     sign = false,
+    sign_priority = 0,
+    virtual_text = true,
+  },
+  symbol_in_winbar = {
+    enable = true,
+  },
+  ui = {
+    border = 'rounded',
   },
 })
 
@@ -30,7 +55,6 @@ keymap("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
 
 -- Show cursor diagnostic
 --[[ keymap("n", "gl", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true }) ]]
-
 -- Diagnsotic jump can use `<c-o>` to jump back
 keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
 keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })

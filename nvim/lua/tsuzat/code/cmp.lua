@@ -19,44 +19,44 @@ end
 
 --   פּ ﯟ   some other good icons
 local kind_icons = {
-  Array = " ",
-  Boolean = " ",
-  Calendar = " ",
-  Class = " ",
-  Color = " ",
-  Constant = " ",
-  Constructor = " ",
-  Enum = "練 ",
-  EnumMember = " ",
-  Event = " ",
-  Field = "ﰠ ",
-  File = " ",
-  Folder = " ",
-  Function = " ",
-  Interface = "ﰮ ",
-  Keyword = " ",
-  Method = " ",
-  Module = " ",
-  Null = "ﳠ ",
-  Number = " ",
-  Object = " ",
-  Operator = " ",
-  Package = " ",
-  Property = " ",
-  Reference = " ",
-  Snippet = " ",
-  String = " ",
-  Struct = "פּ ",
-  Table = " ",
-  Tag = " ",
-  Text = " ",
+  Array         = " ",
+  Boolean       = " ",
+  Calendar      = " ",
+  Class         = " ",
+  Color         = " ",
+  Constant      = " ",
+  Constructor   = " ",
+  Enum          = "練 ",
+  EnumMember    = " ",
+  Event         = " ",
+  Field         = "ﰠ ",
+  File          = " ",
+  Folder        = " ",
+  Function      = " ",
+  Interface     = "ﰮ ",
+  Keyword       = " ",
+  Method        = " ",
+  Module        = " ",
+  Null          = "ﳠ ",
+  Number        = " ",
+  Object        = " ",
+  Operator      = " ",
+  Package       = " ",
+  Property      = " ",
+  Reference     = " ",
+  Snippet       = " ",
+  String        = " ",
+  Struct        = "פּ ",
+  Table         = " ",
+  Tag           = " ",
+  Text          = " ",
   TypeParameter = " ",
-  Unit = " ",
-  Value = " ",
-  Variable = " ",
-  Watch = " ",
+  Unit          = " ",
+  Value         = " ",
+  Variable      = " ",
+  Watch         = " ",
 }
--- find more here: https://www.nerdfonts.com/cheat-sheet
+
 
 cmp.setup {
   snippet = {
@@ -111,7 +111,6 @@ cmp.setup {
     fields = { "kind", "abbr", "menu" },
     format = lspkind.cmp_format({
       maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
-
       -- The function below will be called before any actual modifications from lspkind
       -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
       before = function(entry, vim_item)

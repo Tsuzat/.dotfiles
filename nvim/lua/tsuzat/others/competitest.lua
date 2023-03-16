@@ -108,11 +108,11 @@ competitest.setup {
   output_compare_method = "squish",
 
   testcases_directory = ".",
-  input_name = "input",
-  output_name = "output",
-  testcases_files_format = "$(FNOEXT)_$(INOUT)$(TCNUM).txt",
   testcases_use_single_file = true,
+  testcases_auto_detect_storage = true,
   testcases_single_file_format = "$(FNOEXT).testcases",
+  testcases_input_file_format = "$(FNOEXT)_input$(TCNUM).txt",
+  testcases_output_file_format = "$(FNOEXT)_output$(TCNUM).txt",
 
   companion_port = 27121,
   receive_print_message = true,

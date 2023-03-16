@@ -9,7 +9,6 @@ lsphandler.setup()
 
 require "tsuzat.lsp.mason"
 require "tsuzat.lsp.lspsaga"
-require "tsuzat.lsp.lsp_signature"
 require "tsuzat.lsp.flutter-tools"
 
 -- Custome Language settings and setups goes here
@@ -19,7 +18,13 @@ local opts = {
   capabilities = lsphandler.capabilities,
 }
 
-lspconf.tsserver.setup(opts)
-lspconf.clangd.setup(opts)
-lspconf.pyright.setup(opts)
-lspconf.gopls.setup(opts)
+local servers = {
+  "tsserver",
+  "clangd",
+  "pyright",
+  "gopls",
+}
+
+for _, server in pairs(servers) do
+  lspconf[server].setup(opts)
+end
