@@ -1,4 +1,4 @@
--- Automatically install packer (from Documentation of packer.nvim)
+-- Automatically install lazy.nvim (from Documentation of lazy.nvim)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -212,6 +212,7 @@ local plugins = {
   {
     "williamboman/mason.nvim",
     cmd = "Mason",
+    build = ":Mason",
     dependencies = { "williamboman/mason-lspconfig.nvim" },
     config = function()
       require "tsuzat.lsp.mason"
