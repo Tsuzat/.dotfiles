@@ -1,1 +1,0 @@
-require "tsuzat.others.competitest"
