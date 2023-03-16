@@ -36,6 +36,9 @@ saga.setup({
   ui = {
     border = 'rounded',
   },
+  diagnostic = {
+    on_insert = false,
+  },
 })
 
 -- use <C-t> to jump back
