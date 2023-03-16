@@ -231,18 +231,16 @@ local plugins = {
   -- Comptitive Programming
   {
     "xeluxee/competitest.nvim",
-    opts = require "tsuzat.others.competitest",
-    config = function(_, opts)
-      require("competitest").setup(opts)
+    config = function()
+      require "tsuzat.others.competitest"
     end
   },
 
   -- Flutter Tools
   {
     "akinsho/flutter-tools.nvim",
-    opts = require "tsuzat.others.flutter_tools",
-    config = function(_, opts)
-      require("flutter-tools").setup(opts)
+    config = function()
+      require "tsuzat.others.flutter_tools"
     end
   },
 
