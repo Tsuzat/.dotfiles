@@ -1,15 +1,10 @@
-local status_ok, mason = pcall(require, "mason")
-if not status_ok then
-  return
-end
+local status, mason = pcall(require, "mason")
+if (not status) then return end
+local status2, lspconfig = pcall(require, "mason-lspconfig")
+if (not status2) then return end
 
-local status, mason_lspconfig = pcall(require, "mason-lspconfig")
-
-if not status then
-  return
-end
-
-local lspconfig = require("lspconfig")
+mason.setup({
+})
 
 local servers = {
   "jsonls",
@@ -20,20 +15,9 @@ local servers = {
   "marksman",
 }
 
-mason.setup {}
-
-mason_lspconfig.setup({
+lspconfig.setup {
   ensure_installed = servers,
-})
-
-for _, server in pairs(servers) do
-  local opts = {
-    on_attach = require("tsuzat.lsp.handlers").on_attach,
-    capabilities = require("tsuzat.lsp.handlers").capabilities,
-  }
-  local has_custom_opts, server_custom_opts = pcall(require, "tsuzat.lsp.settings." .. server)
-  if has_custom_opts then
-    opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
-  end
-  lspconfig[server].setup(opts)
-end
+  -- Let mason install the servers setup by lsp-config automatically
+  -- Do not confuse it with `ensure_install`
+  -- automatic_installation = true
+}
