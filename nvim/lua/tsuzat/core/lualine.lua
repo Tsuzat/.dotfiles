@@ -59,7 +59,7 @@ local lsp = {
     return "   " .. (table.concat(t, ", ") or "No LSP")
   end,
   color = { gui = "bold" },
-  cond = hide_in_width,
+  -- cond = hide_in_width,
 }
 
 lualine.setup {

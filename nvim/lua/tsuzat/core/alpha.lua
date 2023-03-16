@@ -1,8 +1,8 @@
-local status_ok, alpha = pcall(require, "alpha")
-if not status_ok then
-  return
-end
-
+-- local status_ok, alpha = pcall(require, "alpha")
+-- if not status_ok then
+--   return
+-- end
+--
 local dashboard = require("alpha.themes.dashboard")
 dashboard.section.header.val = {
   [[ ██╗     ██╗   ██╗███╗   ██╗ █████╗ ██████╗  ██████╗██╗  ██╗  ]],
@@ -18,7 +18,8 @@ dashboard.section.buttons.val = {
   dashboard.button("p", "  Find Git Files", ":Telescope git_files <CR>"),
   dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
   dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-  dashboard.button("c", "  Configuration", ":e ~/.dotfiles/nvim/init.lua <CR>"),
+  dashboard.button("l", "󰒲  Lazy", ":Lazy<CR>"),
+  dashboard.button("c", "  Configuration", ":e $MYVIMRC <CR>"),
   dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 
@@ -35,4 +36,5 @@ dashboard.section.header.opts.hl = "Include"
 dashboard.section.buttons.opts.hl = "Keyword"
 
 dashboard.opts.opts.noautocmd = true
-alpha.setup(dashboard.opts)
+
+return dashboard
