@@ -1,9 +1,4 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
-  return
-end
-
-configs.setup({
+return {
   ensure_installed = {
     "bash",
     "c",
@@ -65,4 +60,4 @@ configs.setup({
     -- colors = {}, -- table of hex strings
     -- termcolors = {} -- table of colour name strings
   }
-})
+}

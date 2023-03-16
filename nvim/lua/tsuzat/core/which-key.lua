@@ -1,9 +1,6 @@
-local status_ok, which_key = pcall(require, "which-key")
-if not status_ok then
-  return
-end
+local M = {}
 
-local setup = {
+M.setup = {
   active = true,
   on_config_done = nil,
   plugins = {
@@ -71,7 +68,7 @@ local setup = {
   },
 }
 
-local opts = {
+M.opts = {
   mode = "n",     -- NORMAL mode
   prefix = "<leader>",
   buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
@@ -80,7 +77,7 @@ local opts = {
   nowait = true,  -- use `nowait` when creating keymaps
 }
 
-local mappings = {
+M.mappings = {
   [";"] = { "<cmd>Alpha<CR>", "Dashboard" },
   ["/"] = { "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", "Comment" },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
@@ -227,5 +224,4 @@ local mappings = {
   },
 }
 
-which_key.setup(setup)
-which_key.register(mappings, opts)
+return M

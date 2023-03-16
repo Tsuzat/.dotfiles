@@ -20,8 +20,8 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Save, select and copy
-keymap("n", "<C-s>", "<cmd> w <CR>", opts) -- Save
-keymap("n", "<C-a>", "ggVG", opts) -- Select All
+keymap("n", "<C-s>", "<cmd> w <CR>", opts)   -- Save
+keymap("n", "<C-a>", "ggVG", opts)           -- Select All
 keymap("n", "<C-c>", "<cmd> %y+ <CR>", opts) -- Copy content of file
 
 -- Better window navigation
@@ -75,4 +75,3 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- NvimTree --
 keymap("n", "<S-t>", ":NvimTreeToggle <CR>", opts)
-
