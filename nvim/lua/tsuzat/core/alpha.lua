@@ -18,18 +18,10 @@ dashboard.section.buttons.val = {
   dashboard.button("p", "  Find Git Files", ":Telescope git_files <CR>"),
   dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
   dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-  dashboard.button("l", "󰒲  Lazy", ":Lazy<CR>"),
+  dashboard.button("l", "  Lazy", ":Lazy<CR>"),
   dashboard.button("c", "  Configuration", ":e $MYVIMRC <CR>"),
-  dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+  dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
-
-local function footer()
-  local stats = require("lazy").stats()
-  local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-  return "✨ Neovim loaded " .. stats.count .. " plugins in " .. ms .. "ms"
-end
-
-dashboard.section.footer.val = footer()
 
 dashboard.section.footer.opts.hl = "Type"
 dashboard.section.header.opts.hl = "Include"
