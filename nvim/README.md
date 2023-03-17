@@ -1,32 +1,31 @@
-<!--toc:start-->
-  - [Lunarch](#lunarch)
-  - [Required](#required)
-  - [Color Scheme](#color-scheme)
-  - [Preview](#preview)
-    - gruvbox-material (star theme)
-    - NeoSolarized
-<!--toc:end-->
+
+
 ## Lunarch
-A fast and beautiful configuration for Neovim; 100% Written in Lua. This project is written mainly for gruvbox theme lover. Everything is customised according to gruvbox-material. Everything has been made transparent. 
+A blazing fast and beautiful configuration for Neovim; 100% Written in Lua. This project is written mainly for transparent theme lover. Everything has been made transparent.
 
 ### Required
 - Neovim v0.7
 - Python and pip
 - Nodejs, npm and yarn (for Lsp and more plugins)
-- [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip)
+- [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 
 ### Color Scheme
-My obsession with [gruvbox-material](https://github.com/sainnhe/gruvbox-material) has made this project an art. Almost everything has been made transparent and beautiful.
-Alternatively, one can use NeoSolarized color-scheme which is optimised for full transparency.
+My obsession with transparency has made this project an art. Almost everything has been made transparent and beautiful.
+Default theme is [`NeoSolarized.nvim`](https://github/Tsuzat/NeoSolarized.nvim)
 
 ### Preview
-System
+System **Linux**
 - Arch based distro [Garuda Linux](https://garudalinux.org/downloads.html)
 - Terminal Emulator [Kitty](https://github.com/kovidgoyal/kitty)
 - Shell : Fish
+- Loading time is about 40-50 ms
 
-#### [NeoSolarized](https://github.com/Tsuzat/NeoSolarized.nvim)
-![Screenshot_3](https://user-images.githubusercontent.com/70003855/197829866-dd67003b-091c-46c4-9e81-15b4121825d4.png)
+![image](../images/image2.png) 
 
-#### gruvbox-material
-![gruvbox-material](../images/s2.png)
+System **Windows**
+- Windows 10
+- Terminal Emulator [`Wezterm`](https://github.com/wez/wezterm)
+- Shell : Powershell
+- Loading time is about 120-150 ms.
+
+![image](../images/image1.png) 
