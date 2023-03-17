@@ -92,9 +92,9 @@ local plugins = {
   {
     "Tsuzat/NeoSolarized.nvim",
     lazy = false,    -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins    opts = require "tsuzat.themes.NeoSolarized",
-    config = function()
-      local opts = require "tsuzat.themes.NeoSolarized"
+    priority = 1000, -- make sure to load this before all the other start plugins
+    opts = require "tsuzat.themes.NeoSolarized",
+    config = function(_, opts)
       require("NeoSolarized").setup(opts)
       vim.cmd [[ colorscheme NeoSolarized ]]
     end
