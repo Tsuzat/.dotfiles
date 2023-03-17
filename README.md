@@ -11,6 +11,12 @@ This repository contains the configuration of my personal workflow.
 
 ### How to configure?
 
+Download and Install your favorite packages (`Arch Linux`)
+
+```sh
+$ sudo pacman -S neovim kitty
+```
+
 Clone the repository in home directory
 
 ```sh
@@ -21,18 +27,12 @@ $ git clone https://github.com/Tsuzat/.dotfiles
 Add a symbolic link to map the configuration
 
 ```sh
-$ ln -s ~/.dotfiles/kitty ~/.config/kitty
-$ ln -s ~/.dotfiles/nvim ~/.config/nvim
-$ ln -s ~/.dotfiles/alacritty ~/.config/alacritty
+$ ln -s ~/.dotfiles/kitty ~/.config/
+$ ln -s ~/.dotfiles/nvim ~/.config/
+$ ln -s ~/.dotfiles/alacritty ~/.config/
 ```
 
-Run the `neovim` and install packages
-
-```sh
-$ nvim +PackerSync
-```
-
-- Note that you may face issue installing `NeoSolarized.nvim` as it is installed locally in NeoVim configuration. In that condition, you can edit code to `use ("Tsuzat/NeoSolarized.nvim")`or refer to https://github.com/Tsuzat/NeoSolarized.nvim.
+- Run the `neovim` and [`lazy.nvim`](https://github.com/folke/lazy.nvim) will download all plugins. 
 
 ### WallPapers
 
