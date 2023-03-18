@@ -1,8 +1,9 @@
 local wezterm = require "wezterm"
 
 return {
-  default_prog = { 'C:\\Users\\aloks\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe' },
-  font = wezterm.font 'Hack NF',
+  default_prog = {
+    'C:\\Users\\aloks\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe' },
+  font = wezterm.font 'FiraCode Nerd Font',
   font_size = 14,
   hide_tab_bar_if_only_one_tab = true,
   tab_bar_at_bottom = true,
@@ -25,7 +26,6 @@ return {
         fg_color = "#CAD3F5",
         bg_color = "#586e75",
       },
-
     },
   },
   windows_padding = {
