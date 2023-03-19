@@ -16,7 +16,10 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
   "nvim-lua/plenary.nvim", -- Common Utilities used by many plugins
-  { "MunifTanjim/nui.nvim",        lazy = true, },
+  {
+    "MunifTanjim/nui.nvim",
+    lazy = true,
+  },
 
   -- very useful plugin
   {
@@ -255,7 +258,6 @@ local plugins = {
     end,
   },
 }
-
 
 local opts = {}
 
