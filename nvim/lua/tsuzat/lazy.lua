@@ -239,6 +239,8 @@ local plugins = {
   -- Flutter Tools
   {
     "akinsho/flutter-tools.nvim",
+    lazy = true,
+    ft = "dart",
     config = function()
       require "tsuzat.others.flutter_tools"
     end
