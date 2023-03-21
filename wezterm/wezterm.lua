@@ -8,8 +8,8 @@ return {
   hide_tab_bar_if_only_one_tab = true,
   tab_bar_at_bottom = true,
   window_background_opacity = 0.8,
-  initial_rows = 25,
-  initial_cols = 85,
+  initial_rows = 30,
+  initial_cols = 100,
   colors = {
     background = '#001217',
     foreground = "#708183",
