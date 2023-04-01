@@ -91,5 +91,5 @@ cls # clear any output after loading the config
 # Invoke-Expression (&starship init powershell)
 
 
-# Using oh-my-posh
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/powerlevel10k_rainbow.omp.json" | Invoke-Expression
+# Using Starship
+Invoke-Expression (&starship init powershell)
