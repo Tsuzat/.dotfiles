@@ -26,7 +26,7 @@ local plugins = {
     "folke/which-key.nvim",
     event = "VeryLazy",
     config = function()
-      local conf = require "tsuzat.core.which-key"
+      local conf = require "tsuzat.core.whichkey"
       local which_key = require("which-key")
       which_key.setup(conf.setup)
       which_key.register(conf.mappings, conf.opts)
