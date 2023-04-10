@@ -239,6 +239,12 @@ local plugins = {
     end
   },
 
+  -- WakaTime for tracking your active time
+  -- Across the devices
+  {
+    "wakatime/vim-wakatime"
+  },
+
   -- Flutter Tools
   {
     "akinsho/flutter-tools.nvim",
