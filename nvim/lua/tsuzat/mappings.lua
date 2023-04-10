@@ -75,3 +75,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- NvimTree --
 keymap("n", "<S-t>", ":NvimTreeToggle <CR>", opts)
+
+-- Terminal Mode
+keymap("t", "<Esc>", "<C-\\><C-n>", opts)
