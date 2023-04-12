@@ -2,26 +2,26 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "JetBrainsMono Nerd Font"
+    family: "FiraCode Nerd Font"
     #style: Regular
 
   # Bold font face
   bold:
-    family: "JetBrainsMono Nerd Font"
+    family: "FiraCode Nerd Font"
     style: Bold
 
   # Italic font face
   italic:
-    family: "JetBrainsMono Nerd Font"
+    family: "FiraCode Nerd Font"
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "JetBrainsMono Nerd Font"
+    family: "FiraCode Nerd Font"
     style: Bold Italic
 
   # Point size
-  size: 11
+  size: 14
 
   # Offset
   #offset:

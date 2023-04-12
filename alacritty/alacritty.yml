@@ -1,9 +1,9 @@
 ## Import files (Colors, Fonts, Etc)
 import:
-  - ~/.config/alacritty/colorscheme/solarized.yml
-  - ~/.config/alacritty/font.yml
+  - C:\Users\aloks\.dotfiles\alacritty\colorscheme\NeoSolarized-dark.yml
+  - C:\Users\aloks\.dotfiles\alacritty\font.yml
 
-# Garuda Linux configuration for Alacritty
+# Windows configuration for Alacritty
 env:
   TERM: xterm-256color
 
@@ -14,7 +14,7 @@ window:
   dynamic_padding: true
   decorations: full
   title: Alacritty@Garuda
-  opacity: 0.9
+  opacity: 0.8
   class:
     instance: Alacritty
     general: Alacritty
@@ -36,20 +36,20 @@ cursor:
 live_config_reload: true
 
 shell:
-  program: /usr/bin/fish
-  args:
-    - --login
+  program: C:\Users\aloks\AppData\Local\Microsoft\WindowsApps\Microsoft.PowerShell_8wekyb3d8bbwe\pwsh.exe
+  # args:
+  #   - --login
 
 mouse:
   hide_when_typing: true
 
 key_bindings:
-    # (Windows, Linux, and BSD only)
-  - { key: V,        mods: Control|Shift, action: Paste            }
-  - { key: C,        mods: Control|Shift, action: Copy             }
-  - { key: Insert,   mods: Shift,         action: PasteSelection   }
-  - { key: Key0,     mods: Control,       action: ResetFontSize    }
-  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  - { key: Plus,     mods: Control,       action: IncreaseFontSize }
-  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
-  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  # (Windows, Linux, and BSD only)
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Insert, mods: Shift, action: PasteSelection }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Plus, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
