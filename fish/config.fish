@@ -170,9 +170,9 @@ export rsync_proxy=$http_proxy
 export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com,::1"
 
 # Flutter Settings
-if test -d ~/Development/flutter/bin
-    if not contains -- ~/Development/flutter/bin $PATH
-        set -p PATH ~/Development/flutter/bin
+if test -d ~/flutter/bin
+    if not contains -- ~/flutter/bin $PATH
+        set -p PATH ~/flutter/bin
     end
 end
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
@@ -190,7 +190,7 @@ alias defenstrate="sudo rm -rf"
 alias lg="lazygit"
 alias gi="git init"
 alias g="git"
-alias cpgitpat="xclip -selection clipboard < ~/Development/Token/.gitpat"
+alias cpgitpat="xclip -selection clipboard < ~/.gitpat"
 alias :q="exit"
 
 # Custom function
