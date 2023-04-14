@@ -1,6 +1,6 @@
 [Appearance]
-ColorScheme=Gruvbox Dark
-Font=JetBrainsMono Nerd Font,16,-1,5,50,0,0,0,0,0
+ColorScheme=NeoSolarized-dark
+Font=FiraCode Nerd Font Mono,16,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=false
 
 [Cursor Options]
