@@ -7,7 +7,7 @@ end
 
 -- Absolute flutter path based on OS (Windows and Linux)
 local flutter_path = vim.fn.has('win32') == 1 and "C:/Development/flutter/bin/flutter.bat" or
-    "/home/tsuzat/Development/flutter/bin/flutter"
+    "/home/tsuzat/flutter/bin/flutter"
 
 flutter.setup({
   flutter_path = flutter_path,
