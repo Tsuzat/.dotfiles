@@ -93,7 +93,10 @@ local plugins = {
 
   -- Themes
   {
-    "Tsuzat/NeoSolarized.nvim",
+    -- TODO: Create it in such a way that if theme is not found locally
+    -- then it should pull 'NeoSolarized.nvim' from github
+    -- Using local theme
+    dir = "~/Projects/NeoSolarized.nvim",
     lazy = false,    -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
     opts = require "tsuzat.themes.NeoSolarized",
