@@ -131,6 +131,7 @@ local servers = {
   "tsserver",
   "pyright",
   "csharp_ls",
+  "rust_analyzer",
 }
 
 local ops = {
