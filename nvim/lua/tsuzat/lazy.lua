@@ -87,7 +87,16 @@ local plugins = {
       require("Comment").setup(opts)
     end
   },
-  "norcalli/nvim-colorizer.lua",                 -- For color visualization
+
+  -- For color visualization
+  {
+    "norcalli/nvim-colorizer.lua",
+    even = "VeryLazy",
+    opts = require "tsuzat.code.colorizer",
+    config = function(_, opts)
+      require("colorizer").setup(opts)
+    end
+  },
   "JoosepAlviste/nvim-ts-context-commentstring", -- Comment ts context files
   "windwp/nvim-ts-autotag",                      -- useful for html auto tagging
 
