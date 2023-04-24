@@ -129,7 +129,8 @@ local servers = {
   "emmet_ls",
   "marksman",
   "tsserver",
-  "pyright",
+  -- "pyright",
+  "pylsp",
   "csharp_ls",
   "rust_analyzer",
 }
