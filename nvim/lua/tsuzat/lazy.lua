@@ -72,8 +72,6 @@ local plugins = {
     opts = require "tsuzat.core.indentline",
     config = function(_, opts)
       vim.opt.list = true
-      -- vim.opt.listchars:append "space:⋅"
-      -- vim.opt.listchars:append "space:"
       vim.opt.listchars:append "eol:↴" -- Or use ﬋
       require("indent_blankline").setup(opts)
     end
