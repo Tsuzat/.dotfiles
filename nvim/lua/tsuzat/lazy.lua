@@ -100,8 +100,7 @@ local plugins = {
 
   -- Themes
   {
-    vim.fn.has('win32') == 1 and "Tsuzat/NeoSolarized.nvim" or
-    "~/Projects/NeoSolarized.nvim",
+    "Tsuzat/NeoSolarized.nvim",
     lazy = false,    -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
     opts = require "tsuzat.themes.NeoSolarized",
