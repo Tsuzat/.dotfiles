@@ -1,0 +1,55 @@
+## Import files (Colors, Fonts, Etc)
+import:
+  - C:\Users\aloks\.dotfiles\alacritty\colorscheme\NeoSolarized-dark.yml
+  - C:\Users\aloks\.dotfiles\alacritty\font.yml
+
+# Windows configuration for Alacritty
+env:
+  TERM: xterm-256color
+
+window:
+  dimensions:
+    columns: 100
+    lines: 30
+  dynamic_padding: true
+  decorations: full
+  title: Alacritty@Garuda
+  opacity: 0.8
+  class:
+    instance: Alacritty
+    general: Alacritty
+  gtk_theme_variant: dark
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+draw_bold_text_with_bright_colors: true
+
+save_to_clipboard: true
+
+window.dynamic_title: true
+
+cursor:
+  style: beam
+
+live_config_reload: true
+
+shell:
+  program: C:\Users\aloks\AppData\Local\Microsoft\WindowsApps\Microsoft.PowerShell_8wekyb3d8bbwe\pwsh.exe
+  # args:
+  #   - --login
+
+mouse:
+  hide_when_typing: true
+
+key_bindings:
+  # (Windows, Linux, and BSD only)
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: Insert, mods: Shift, action: PasteSelection }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Plus, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
