@@ -162,11 +162,11 @@ end
 ##### ALL MY PERSONALIZATION #####
 
 # Proxy Setting
-export http_proxy=http://10.32.0.1:8080
-export https_proxy=$http_proxy
-export ftp_proxy=$http_proxy
-export rsync_proxy=$http_proxy
-export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com,::1"
+# export http_proxy=http://10.32.0.1:8080
+# export https_proxy=$http_proxy
+# export ftp_proxy=$http_proxy
+# export rsync_proxy=$http_proxy
+# export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com,::1"
 
 # Flutter Settings
 if test -d ~/flutter/bin
