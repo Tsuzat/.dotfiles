@@ -11,7 +11,7 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 
 # Vim Like KeyBinding for Next and Previous History Selection
 # Using `Ctrl+j` for Next selection and `Ctrl+k` for Previous selection
-# Remove following commands if you want to use arrow key for navigation
+# Remove following commands if you want to use just arrow key for navigation
 Set-PSReadLineKeyHandler -Key Ctrl+j -Function HistorySearchForward
 Set-PSReadLineKeyHandler -Key Ctrl+k -Function HistorySearchBackward
 
@@ -19,7 +19,6 @@ Set-PSReadLineKeyHandler -Key Ctrl+k -Function HistorySearchBackward
 Set-Alias -Name "vim" -Value "nvim"
 Set-Alias -Name "v" -Value "nvim"
 Set-Alias -Name "g" -Value "git"
-Set-Alias -Name "ll" -Value "ls"
 Set-Alias -Name ".." -Value "cd.."
 Set-Alias -Name "lg" -Value "lazygit"
 
