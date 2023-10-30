@@ -2,17 +2,13 @@ return {
   ensure_installed = {
     "bash",
     "c",
-    -- "cmake",
     "comment",
-    "c_sharp",
     "cpp",
     "css",
-    "dart",
-    -- "dockerfile",
-    "go",
     "html",
     "javascript",
     "json",
+    "java",
     "jsonc",
     "lua",
     "markdown",
@@ -22,7 +18,6 @@ return {
     "vim",
     "yaml",
     "fish",
-    "rust"
   },                       -- one of "all" or a list of languages
   ignore_install = { "" }, -- List of parsers to ignore installing
   matchup = {
