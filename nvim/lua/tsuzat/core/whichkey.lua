@@ -188,10 +188,6 @@ M.mappings = {
     },
     e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
   },
-  o = {
-    name = "others",
-    b = { "<cmd>!black --fast -q % <cr><cr>", "Format Python" }
-  },
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
