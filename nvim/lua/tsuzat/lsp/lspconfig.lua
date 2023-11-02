@@ -131,7 +131,6 @@ local servers = {
   "marksman",
   "tsserver",
   "pyright",
-  "tsserver"
   -- "pylsp",
   -- "csharp_ls",
   -- "rust_analyzer",
