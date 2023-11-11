@@ -13,9 +13,9 @@ M.options = {
   -- NOTE: this plugin is designed with this icon in mind,
   -- and so changing this is NOT recommended, this is intended
   -- as an escape hatch for people who cannot bear it for whatever reason
-  --[[ indicator_icon = "▎", ]]
   indicator = {
-    icon = "▎",
+    -- icon = "▎",
+    icon = "|",
     style = 'icon'
   },
   buffer_close_icon = "",
@@ -65,7 +65,7 @@ M.options = {
   persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
   -- can also be a table containing 2 custom separators
   -- [focused and unfocused]. eg: { '|', '|' }
-  separator_style = "thin",
+  separator_style = { "|", "|" },
   enforce_regular_tabs = true,
   always_show_bufferline = true,
   sort_by = "id",

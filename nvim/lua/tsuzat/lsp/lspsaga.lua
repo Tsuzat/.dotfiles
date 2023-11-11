@@ -22,6 +22,7 @@ saga.setup({
       quit = 'q',
       exec = '<CR>',
     },
+    extend_gitsigns = false,
   },
   lightbulb = {
     enable = true,
