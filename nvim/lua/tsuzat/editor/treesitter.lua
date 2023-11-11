@@ -1,6 +1,6 @@
+
 return {
   ensure_installed = {
-    "bash",
     "c",
     "comment",
     "cpp",
@@ -17,7 +17,6 @@ return {
     "typescript",
     "vim",
     "yaml",
-    "fish",
   },                       -- one of "all" or a list of languages
   ignore_install = { "" }, -- List of parsers to ignore installing
   matchup = {
@@ -27,7 +26,7 @@ return {
   highlight = {
     enable = true,           -- false will disable the whole extension
     use_languagetree = true, -- use this to enable language injection
-    disable = { "css" },     -- list of language that will be disabled
+    disable = { "css", "dart" },     -- list of language that will be disabled
   },
   autopairs = {
     enable = true,

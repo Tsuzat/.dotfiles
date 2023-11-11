@@ -1,3 +1,4 @@
+
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
   return
@@ -17,7 +18,6 @@ local check_backspace = function()
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
---   פּ ﯟ   some other good icons
 local kind_icons = {
   Array         = " ",
   Boolean       = " ",
@@ -119,10 +119,10 @@ cmp.setup {
         vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
         -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
         vim_item.menu = ({
-          nvim_lsp = "(LSP)",
-          luasnip = "(Snippet)",
-          buffer = "(Buffer)",
-          path = "(Path)",
+          nvim_lsp = "[LSP]",
+          luasnip = "[Snippet]",
+          buffer = "[Buffer]",
+          path = "[Path]",
         })[entry.source.name]
         return vim_item
       end

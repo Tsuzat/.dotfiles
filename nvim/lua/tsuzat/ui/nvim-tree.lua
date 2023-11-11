@@ -34,12 +34,12 @@ nvim_tree.setup {
           symlink_open = "",
         },
         git = {
-          unstaged = "",
-          staged = "S",
+          unstaged = "U",
+          staged = "",
           unmerged = "",
           renamed = "➜",
-          untracked = "U",
-          deleted = "",
+          untracked = "",
+          deleted = "",
           ignored = "◌",
         },
       },
@@ -65,3 +65,4 @@ nvim_tree.setup {
     side = "left",
   },
 }
+
