@@ -24,4 +24,5 @@ ansi = [ "#002b36", "#dc322f", "#859900", "#b58900", "#268bd2", "#d33682", "#2aa
 brights = [ "#001e26", "#cb4b16", "#465a61", "#52676f", "#708183", "#6c71c4", "#81908f", "#fcf4dc" ]
 
 [metadata]
+author = 'Tsuzat'
 name = 'NeoSolarized Dark'
