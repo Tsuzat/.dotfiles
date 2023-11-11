@@ -48,10 +48,32 @@ return {
   {
     "Tsuzat/NeoSolarized.nvim",
     lazy = false,    -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
+    -- priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
-      vim.cmd [[ colorscheme NeoSolarized ]]
+      require "tsuzat.themes.NeoSolarized"
+      -- vim.cmd [[ colorscheme NeoSolarized ]]
     end
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+    -- priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      require "tsuzat.themes.tokyonight"
+      -- vim.cmd[[colorscheme tokyonight-night]]
+    end
+  },
+
+  {
+    "catppuccin/nvim",
+    lazy = false,
+    priority = 1000,
+    config = function ()
+      require "tsuzat.themes.catppuccin"
+      vim.cmd[[colorscheme catppuccin-mocha]]
+    end
+
   },
 
   -- Autocompletion
@@ -96,8 +118,7 @@ return {
     end
   },
 
-  -- Mason
-  -- TODO: Mason can not be put
+  -- Mason: Usefull to download language servers
   {
     "williamboman/mason.nvim",
     lazy = true,
@@ -223,9 +244,8 @@ return {
     "nvim-telescope/telescope.nvim",
     lazy = true,
     cmd = "Telescope",
-    opts = require "tsuzat.utils.telescope",
-    config = function(_, opts)
-      require("telescope").setup(opts)
+    config = function()
+      require "tsuzat.utils.telescope"
     end
   },
 
@@ -253,7 +273,7 @@ return {
     lazy = true,
     event = "VeryLazy",
     config = function()
-      local conf = require "tsuzat.utils.which-key"
+      local conf = require "tsuzat.utils.whichkey"
       local which_key = require("which-key")
       which_key.setup(conf.setup)
       which_key.register(conf.mappings, conf.opts)
@@ -279,5 +299,16 @@ return {
       require "tsuzat.utils.colorizer"
     end
   },
+
+  -- Comptitest: Helpful utility for CP
+  {
+    "xeluxee/competitest.nvim",
+    lazy = true,
+    event = "VeryLazy",
+    cmd = "ComptiTest",
+    config = function ()
+      require "tsuzat.utils.competitest"
+    end
+  }
 
 }
