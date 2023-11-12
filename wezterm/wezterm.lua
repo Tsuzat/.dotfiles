@@ -8,7 +8,9 @@ return {
   font_size = 14,
   hide_tab_bar_if_only_one_tab = true,
   tab_bar_at_bottom = true,
-  window_background_opacity = 0.8,
+  window_background_opacity = 0.75,
+  -- Available "Acrylic", "Mica", "Tabbed", "Disable" and "Auto"
+  win32_system_backdrop = "Auto",
   initial_rows = 30,
   initial_cols = 100,
   color_scheme = 'NeoSolarized Dark',
