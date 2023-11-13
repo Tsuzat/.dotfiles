@@ -124,11 +124,16 @@ return {
     -- lazy = true,
     event = { "BufReadPre", "BufNewFile" },
     build = ":Mason",
-    dependencies = { "williamboman/mason-lspconfig.nvim" },
     cmd = "Mason",
     config = function()
       require "tsuzat.lsp.mason"
     end
+  },
+
+  {
+    "williamboman/mason-lspconfig.nvim",
+    lazy = true,
+    event = { "BufReadPre", "BufNewFile" },
   },
 
   -- Treesitter
