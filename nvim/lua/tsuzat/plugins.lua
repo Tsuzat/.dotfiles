@@ -47,7 +47,7 @@ return {
   -- Themes
   {
     "Tsuzat/NeoSolarized.nvim",
-    lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
     -- priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       require "tsuzat.themes.NeoSolarized"
@@ -57,7 +57,7 @@ return {
 
   {
     "folke/tokyonight.nvim",
-    lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
     -- priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       require "tsuzat.themes.tokyonight"
@@ -69,9 +69,9 @@ return {
     "catppuccin/nvim",
     lazy = false,
     priority = 1000,
-    config = function ()
+    config = function()
       require "tsuzat.themes.catppuccin"
-      vim.cmd[[colorscheme catppuccin-mocha]]
+      vim.cmd [[colorscheme catppuccin-mocha]]
     end
 
   },
@@ -101,7 +101,7 @@ return {
   -- LSP Config
   {
     "neovim/nvim-lspconfig",
-    lazy = true,
+    -- lazy = true,
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require "tsuzat.lsp.lspconfig"
@@ -111,7 +111,7 @@ return {
   -- LSP Saga
   {
     "nvimdev/lspsaga.nvim",
-    lazy = true,
+    -- lazy = true,
     event = "BufRead",
     config = function()
       require "tsuzat.lsp.lspsaga"
@@ -121,7 +121,7 @@ return {
   -- Mason: Usefull to download language servers
   {
     "williamboman/mason.nvim",
-    lazy = true,
+    -- lazy = true,
     event = { "BufReadPre", "BufNewFile" },
     build = ":Mason",
     dependencies = { "williamboman/mason-lspconfig.nvim" },
@@ -306,9 +306,19 @@ return {
     lazy = true,
     event = "VeryLazy",
     cmd = "ComptiTest",
-    config = function ()
+    config = function()
       require "tsuzat.utils.competitest"
     end
-  }
+  },
 
+  -- Flutter Tool: Provides good tooling for Flutter
+  {
+    "akinsho/flutter-tools.nvim",
+    lazy = true,
+    event = "VeryLazy",
+    ft = "dart",
+    config = function()
+      require "tsuzat.utils.flutter-tools"
+    end
+  },
 }
