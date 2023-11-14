@@ -160,4 +160,7 @@ M.highlights = {
   },
 }
 
-return M
+require("bufferline").setup {
+  options = M.options,
+  highlights = M.highlights
+}

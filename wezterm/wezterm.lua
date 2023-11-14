@@ -13,7 +13,7 @@ return {
   win32_system_backdrop = "Tabbed",
   initial_rows = 30,
   initial_cols = 100,
-  color_scheme = 'NeoSolarized Dark',
+  color_scheme = 'Catppuccin Mocha',
   color_scheme_dirs = { "~/.dotfiles/wezterm/colors" },
   window_padding = {
     left = 2,

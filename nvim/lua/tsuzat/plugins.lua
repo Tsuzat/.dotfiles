@@ -89,7 +89,7 @@ return {
   {
     "nvimdev/lspsaga.nvim",
     -- lazy = true,
-    event = "BufRead",
+    event = "LspAttach",
     config = function()
       require "tsuzat.lsp.lspsaga"
     end
@@ -202,11 +202,7 @@ return {
   {
     "akinsho/bufferline.nvim",
     config = function()
-      local opts = require "tsuzat.ui.bufferline"
-      require("bufferline").setup {
-        options = opts.options,
-        highlights = opts.highlights
-      }
+      require "tsuzat.ui.bufferline"
     end
   },
 
