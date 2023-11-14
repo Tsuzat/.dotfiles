@@ -17,30 +17,7 @@ return {
     "goolord/alpha-nvim",
     event = "VimEnter",
     config = function()
-      local dashboard = require "tsuzat.ui.alpha"
-      -- Close Lazy and re-open when the dashboard is ready
-      if vim.o.filetype == "lazy" then
-        vim.cmd.close()
-        vim.api.nvim_create_autocmd("User", {
-          pattern = "AlphaReady",
-          callback = function()
-            require("lazy").show()
-          end,
-        })
-      end
-
-      require("alpha").setup(dashboard.opts)
-
-      -- Get the time for loading config
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "LazyVimStarted",
-        callback = function()
-          local stats = require("lazy").stats()
-          local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-          dashboard.section.footer.val = "✨ Neovim loaded " .. stats.count .. " plugins in " .. ms .. " ms ✨"
-          pcall(vim.cmd.AlphaRedraw)
-        end,
-      })
+      require "tsuzat.ui.alpha"
     end,
   },
 
@@ -132,7 +109,7 @@ return {
 
   {
     "williamboman/mason-lspconfig.nvim",
-    lazy = true,
+    -- lazy = true,
     event = { "BufReadPre", "BufNewFile" },
   },
 
@@ -264,8 +241,9 @@ return {
   -- Markdown Preview: Real time markdown preview in a browser
   {
     "iamcco/markdown-preview.nvim",
-    lazy = true,
-    event = "VeryLazy",
+    --[[ lazy = true,
+    event = "VeryLazy", ]]
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = "markdown",
     build = function()
       vim.fn["mkdp#util#install"]()

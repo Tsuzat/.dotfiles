@@ -7,7 +7,7 @@ dashboard.section.header.val = {
   [[██║███╗██║██║██║╚██╗██║╚██╗ ██╔╝██║██║╚██╔╝██║]],
   [[╚███╔███╔╝██║██║ ╚████║ ╚████╔╝ ██║██║ ╚═╝ ██║]],
   [[ ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝]]
-}                                              
+}
 
 dashboard.section.buttons.val = {
   dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
@@ -26,5 +26,27 @@ dashboard.section.buttons.opts.hl = "Keyword"
 
 dashboard.opts.opts.noautocmd = true
 
-return dashboard
+if vim.o.filetype == "lazy" then
+  vim.cmd.close()
+  vim.api.nvim_create_autocmd("User", {
+    pattern = "AlphaReady",
+    callback = function()
+      require("lazy").show()
+    end,
+  })
+end
+
+require("alpha").setup(dashboard.opts)
+
+-- Get the time for loading config
+vim.api.nvim_create_autocmd("User", {
+  pattern = "LazyVimStarted",
+  callback = function()
+    local stats = require("lazy").stats()
+    local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+    dashboard.section.footer.val = "✨ Neovim loaded " ..
+    stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. " ms ✨"
+    pcall(vim.cmd.AlphaRedraw)
+  end,
+})
 
