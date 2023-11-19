@@ -136,7 +136,7 @@ return {
     lazy = true,
     event = { "BufReadPre", "BufNewFile" },
     config = function()
-      require "tsuzat.utils.gitsign"
+      require "tsuzat.editor.gitsign"
     end
   },
 
@@ -211,7 +211,7 @@ return {
     "numToStr/Comment.nvim",
     lazy = true,
     event = { "BufReadPost", "BufNewFile" },
-    opts = require "tsuzat.utils.comment",
+    opts = require "tsuzat.editor.comment",
     config = function(_, opts)
       require("Comment").setup(opts)
     end
@@ -275,7 +275,28 @@ return {
     event = "VeryLazy",
     cmd = "ColorizerToggle",
     config = function()
-      require "tsuzat.utils.colorizer"
+      require "tsuzat.editor.colorizer"
+    end
+  },
+
+  -- conform.nvim: Very Helpful tool for formatting code
+  {
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
+    keys = {
+      {
+        -- Customize or remove this keymap to your liking
+        "<leader>f",
+        function()
+          require("conform").format({ async = true, lsp_fallback = true })
+        end,
+        mode = "",
+        desc = "Format buffer",
+      },
+    },
+    config = function ()
+      require "tsuzat.utils.conform"
     end
   },
 
