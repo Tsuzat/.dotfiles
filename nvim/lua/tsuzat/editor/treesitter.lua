@@ -1,4 +1,3 @@
-
 return {
   ensure_installed = {
     "c",
@@ -24,9 +23,9 @@ return {
     -- disable = { "c", "ruby" },  -- optional, list of language that will be disabled
   },
   highlight = {
-    enable = true,           -- false will disable the whole extension
-    use_languagetree = true, -- use this to enable language injection
-    disable = { "css", "dart" },     -- list of language that will be disabled
+    enable = true,               -- false will disable the whole extension
+    use_languagetree = true,     -- use this to enable language injection
+    disable = { "css", "dart" }, -- list of language that will be disabled
   },
   autopairs = {
     enable = true,
@@ -34,6 +33,7 @@ return {
   autotag = {
     enable = true,
   },
+  indent = { enable = true },
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
@@ -57,3 +57,4 @@ return {
     -- termcolors = {} -- table of colour name strings
   }
 }
+
