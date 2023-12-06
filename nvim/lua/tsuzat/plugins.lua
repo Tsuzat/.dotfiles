@@ -113,12 +113,33 @@ return {
     event = { "BufReadPre", "BufNewFile" },
   },
 
+  -- TS-Context-String
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring", -- Comment ts context files
+    lazy = true,
+    event = { "BufReadPost", "BufNewFile" },
+    config = function()
+      require('ts_context_commentstring').setup {
+
+        enable = true,
+        enable_autocmd = false,
+        config = {
+          -- Languages that have a single comment style
+          typescript = "// %s",
+          css = "/* %s */",
+          scss = "/* %s */",
+          html = "<!-- %s -->",
+          svelte = "<!-- %s -->",
+          vue = "<!-- %s -->",
+          json = ""
+        } }
+    end
+  },
   -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = true,
     dependencies = {
-      "JoosepAlviste/nvim-ts-context-commentstring", -- Comment ts context files
       "windwp/nvim-ts-autotag",
       "p00f/nvim-ts-rainbow",
     },
@@ -295,7 +316,7 @@ return {
         desc = "Format buffer",
       },
     },
-    config = function ()
+    config = function()
       require "tsuzat.utils.conform"
     end
   },
