@@ -86,21 +86,24 @@ return {
   },
 
   -- Mason: Usefull to download language servers
+  -- FIXME: Mason some times works and sometimes does not
+  -- on doing removing lazy option
   {
     "williamboman/mason.nvim",
-    -- lazy = true,
+    lazy = false,
     event = { "BufReadPre", "BufNewFile" },
     build = ":Mason",
     cmd = "Mason",
     config = function()
-      require "tsuzat.lsp.mason"
+      require("mason").setup()
     end
   },
 
   {
     "williamboman/mason-lspconfig.nvim",
-    -- lazy = true,
-    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require "tsuzat.lsp.mason"
+    end
   },
 
   -- TS-Context-String
