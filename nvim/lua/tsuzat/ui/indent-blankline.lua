@@ -17,9 +17,14 @@ ibl.setup {
   indent = {
     char = "│",
     -- char = "▏",
+    tab_char = "│",
   },
   scope = {
     enabled = false,
     show_start = false,
-  }
+  },
+  whitespace = {
+    remove_blankline_trail = false,
+  },
 }
+
