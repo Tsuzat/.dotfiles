@@ -1,8 +1,13 @@
+-- Change Shell based on OS (Windows and Linux)
+local shell = vim.fn.has('win32') == 1 and "pwsh.exe" or
+    "fish"
+
+
 local options = {
   autoindent     = true,                      -- Auto indent
   title          = true,                      -- Show the title
   backup         = false,                     -- creates a backup file
-  clipboard      = "",             -- allows neovim to access the system clipboard
+  clipboard      = "unnamedplus",             -- allows neovim to access the system clipboard
   cmdheight      = 1,                         -- more space in the neovim command line for displaying messages
   completeopt    = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel   = 0,                         -- so that `` is visible in markdown files
@@ -17,7 +22,7 @@ local options = {
   numberwidth    = 2,                         -- set number column width to 2 {default 4}
   relativenumber = true,                      -- set relative numbered lines
   scrolloff      = 8,                         -- is one of my fav
-  shell          = 'pwsh.exe',                    -- Default shell
+  shell          = shell,                     -- Default shell
   shiftwidth     = 2,                         -- the number of spaces inserted for each indentation
   showtabline    = 2,                         -- always show tabs
   showmode       = false,                     -- No need to show mode always
@@ -49,3 +54,4 @@ vim.cmd [[set iskeyword+=-]]
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
+
