@@ -92,6 +92,9 @@ symbol = " "
 [dart]
 symbol = " "
 
+[kotlin]
+symbol = " "
+
 [docker_context]
 symbol = " "
 

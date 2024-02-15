@@ -3,7 +3,7 @@ local wezterm = require "wezterm"
 
 return {
   default_prog = {
-    'C:\\Users\\aloks\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe' },
+    'pwsh.exe' },
   font = wezterm.font 'FiraCode Nerd Font',
   font_size = 14,
   hide_tab_bar_if_only_one_tab = true,
@@ -13,7 +13,7 @@ return {
   win32_system_backdrop = "Tabbed",
   initial_rows = 30,
   initial_cols = 100,
-  color_scheme = 'Catppuccin Mocha',
+  color_scheme = 'NeoSolarized Dark',
   color_scheme_dirs = { "~/.dotfiles/wezterm/colors" },
   window_padding = {
     left = 2,
