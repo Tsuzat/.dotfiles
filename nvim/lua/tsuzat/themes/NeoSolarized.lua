@@ -1,4 +1,4 @@
-return {
+require("NeoSolarized").setup({
   style = "dark",         -- "dark" or "light"
   transparent = true,     -- true/false; Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
@@ -17,4 +17,4 @@ return {
   on_highlights = function(highlights, colors)
     -- highlights.Include.fg = colors.red -- Using `red` foreground for Includes
   end,
-}
+})

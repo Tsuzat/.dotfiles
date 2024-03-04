@@ -24,21 +24,21 @@ return {
   -- Themes
   {
     "Tsuzat/NeoSolarized.nvim",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    -- priority = 1000, -- make sure to load this before all the other start plugins
+    lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       require "tsuzat.themes.NeoSolarized"
-      -- vim.cmd [[ colorscheme NeoSolarized ]]
+      vim.cmd [[ colorscheme NeoSolarized ]]
     end
   },
 
   {
     "catppuccin/nvim",
     lazy = false,
-    priority = 1000,
+    -- priority = 1000,
     config = function()
       require "tsuzat.themes.catppuccin"
-      vim.cmd [[colorscheme catppuccin-mocha]]
+      -- vim.cmd [[colorscheme catppuccin-mocha]]
     end
 
   },
@@ -90,7 +90,7 @@ return {
   -- on doing removing lazy option
   {
     "williamboman/mason.nvim",
-    lazy = false,
+    -- lazy = false,
     event = { "BufReadPre", "BufNewFile" },
     build = ":Mason",
     cmd = "Mason",
@@ -101,6 +101,7 @@ return {
 
   {
     "williamboman/mason-lspconfig.nvim",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       require "tsuzat.lsp.mason"
     end
@@ -336,4 +337,3 @@ return {
     end
   },
 }
-

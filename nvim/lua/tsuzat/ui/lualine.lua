@@ -33,14 +33,18 @@ local diff = {
   "diff",
   -- source = diff_source,
   symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-  diff_color = {
+  --[[ diff_color = {
     added = { fg = "#98be65" },
     modified = { fg = "#ECBE7B" },
     removed = { fg = "#ec5f67" },
-  },
+  }, ]]
   update_in_insert = true,
   cond = hide_in_width
 }
+
+
+
+
 
 
 local lsp = {
