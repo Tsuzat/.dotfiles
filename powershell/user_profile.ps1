@@ -44,6 +44,12 @@ function pgrep($name) {
 
 ####### Utilities ####### 
 
+# function to create a new git repo
+function giac($Branch = "master", $Message = "Initial Commit") {
+    git init -b $Branch
+    git add .
+    git commit -am $Message
+}
 # function for quick git add, commit and push
 # by just providing the Message
 function gacp ($Message){
