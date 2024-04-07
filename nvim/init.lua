@@ -1,3 +1,3 @@
-require("tsuzat.options")
-require("tsuzat.mappings")
-require("tsuzat.lazy")
+require "tsuzat.core"
+require "tsuzat.lazy"
+

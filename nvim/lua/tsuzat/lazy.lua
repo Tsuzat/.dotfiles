@@ -12,13 +12,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Put Options Here
-local opts = {}
--- Plugins are need to be required here
-local ok, plugins = pcall(require, "tsuzat.plugins")
-
-if not ok then
-  return
-end
-
-require("lazy").setup(plugins, opts)
+require("lazy").setup({ { import = "tsuzat.plugins" }, { import = "tsuzat.plugins.lsp" } }, {
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
+  },
+})
