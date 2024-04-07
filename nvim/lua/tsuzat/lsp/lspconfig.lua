@@ -131,9 +131,8 @@ local servers = {
   "marksman",
   "tsserver",
   "pyright",
-  -- "pylsp",
-  -- "csharp_ls",
-  -- "rust_analyzer",
+  "gopls",
+  "svelte",
 }
 
 local ops = {

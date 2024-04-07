@@ -28,7 +28,7 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       require "tsuzat.themes.NeoSolarized"
-      vim.cmd [[ colorscheme NeoSolarized ]]
+      vim.cmd.colorscheme "NeoSolarized"
     end
   },
 
@@ -38,7 +38,7 @@ return {
     -- priority = 1000,
     config = function()
       require "tsuzat.themes.catppuccin"
-      -- vim.cmd [[colorscheme catppuccin-mocha]]
+      -- vim.cmd.colorscheme "catppuccin-mocha"
     end
 
   },
