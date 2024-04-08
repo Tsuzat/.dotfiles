@@ -134,7 +134,7 @@ return {
       },
       g = {
         name = "Git",
-        g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+        -- g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
         j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
         k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
         l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -156,7 +156,6 @@ return {
       },
       l = {
         name = "LSP",
-        a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
         d = {
           "<cmd>Telescope lsp_document_diagnostics<cr>",
           "Document Diagnostics",
@@ -167,7 +166,6 @@ return {
         },
         f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
         i = { "<cmd>LspInfo<cr>", "Info" },
-        I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
         j = {
           "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
           "Next Diagnostic",
@@ -186,8 +184,8 @@ return {
         },
         e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
       },
-      s = {
-        name = "Search",
+      t = {
+        name = "Telescope",
         b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
         c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
         f = { "<cmd>Telescope find_files<cr>", "Find File" },
