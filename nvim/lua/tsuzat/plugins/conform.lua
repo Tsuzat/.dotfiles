@@ -26,7 +26,7 @@ return {
         formatters_by_ft = {
           python = { "ruff_format" },
           javascript = { { "prettierd", "prettier" } },
-          svelte = { { "prettierd", "prettier" } },
+          -- svelte = { { "prettierd", "prettier" } },
         },
         -- Set up format-on-save
         format_on_save = { timeout_ms = 500, lsp_fallback = true },
