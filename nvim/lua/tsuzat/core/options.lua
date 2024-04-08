@@ -61,9 +61,11 @@ vim.opt.wildignore:append({ "*/node_modules/*" })
 
 -- Inform vim how to enable undercurl in wezterm
 vim.cmd([[let &t_Cs = "\e[60m"]])
--- Inform vim how to disable undercurl in wezterm (this disables all underline modes)
--- let &t_Ce = "\e[24m"
+vim.cmd([[let &t_Cs = "\e[24m"]])
 
 -- Undercurl
--- vim.cmd([[let &t_Cs = "\e[4:3m"]])
+vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
+
+
+vim.opt.statuscolumn = [[%!v:lua.require'tsuzat.core.ui'.statuscolumn()]]
