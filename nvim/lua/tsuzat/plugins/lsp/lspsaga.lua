@@ -5,13 +5,8 @@ return {
   event = "LspAttach",
   config = function()
     local keymap = vim.keymap.set
-    local status, saga = pcall(require, "lspsaga")
 
-    if not status then
-      return
-    end
-
-    saga.setup({
+    require("lspsaga").setup({
       preview = {
         lines_above = 0,
         lines_below = 10,
