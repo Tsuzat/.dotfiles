@@ -26,6 +26,13 @@ keymap("n", "<C-s>", "<cmd> w <CR>", opts)   -- Save
 keymap("n", "<C-a>", "ggVG", opts)           -- Select All
 keymap("n", "<C-c>", "<cmd> %y+ <CR>", opts) -- Copy content of file
 
+-- Increment/Decrement
+keymap("n", "+", "<C-a>", opts)
+keymap("n", "-", "<C-x>", opts)
+
+-- No search highlight
+keymap("n", "<Esc>n", ":nohlsearch<CR>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
