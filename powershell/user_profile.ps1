@@ -2,6 +2,7 @@
 # Install-Module -Name Terminal-Icons
 Import-Module Terminal-Icons
 
+# `scoop install gsudo`
 # For Elevated Command
 Import-Module gsudoModule
 
@@ -17,6 +18,9 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 # Remove following commands if you want to use just arrow key for navigation
 Set-PSReadLineKeyHandler -Key Ctrl+j -Function HistorySearchForward
 Set-PSReadLineKeyHandler -Key Ctrl+k -Function HistorySearchBackward
+
+# Install-Module npm-completion -Scope CurrentUser
+Import-Module npm-completion
 
 # Alias
 Set-Alias -Name "vim" -Value "nvim"
@@ -48,11 +52,12 @@ function pgrep($name) {
 ####### Utilities ####### 
 
 # function to create a new git repo
-function giac($Branch = "master", $Message = "Initial Commit") {
+function ginit($Branch = "master", $Message = "Initial Commit") {
     git init -b $Branch
     git add .
     git commit -am $Message
 }
+
 # function for quick git add, commit and push
 # by just providing the Message
 function gacp ($Message){
@@ -106,8 +111,4 @@ cls # clear any output after loading the config
 
 # install starship
 # `scoop install starship`
-# Invoke-Expression (&starship init powershell)
-
-
-# Using Starship
 Invoke-Expression (&starship init powershell)
