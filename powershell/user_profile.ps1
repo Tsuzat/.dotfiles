@@ -20,8 +20,12 @@ Set-PSReadLineKeyHandler -Key Ctrl+j -Function HistorySearchForward
 Set-PSReadLineKeyHandler -Key Ctrl+k -Function HistorySearchBackward
 
 # Install-Module npm-completion -Scope CurrentUser
+# add the npm tab completion 
 Import-Module npm-completion
 
+# `scoop install posh-git`
+# add the git tab completion
+Import-Module posh-git
 # Alias
 Set-Alias -Name "vim" -Value "nvim"
 Set-Alias -Name "v" -Value "nvim"
@@ -107,7 +111,7 @@ function time ($Command){
 # enable completion in current shell, use absolute path because PowerShell Core not respect $env:PSModulePath
 Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
 
-cls # clear any output after loading the config
+# cls # clear any output after loading the config
 
 # install starship
 # `scoop install starship`
