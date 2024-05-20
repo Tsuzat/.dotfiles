@@ -39,7 +39,7 @@ return {
     local lsp = {
       function()
         local t = {}
-        for _, client in ipairs(vim.lsp.get_active_clients()) do
+        for _, client in ipairs(vim.lsp.get_clients()) do
           if client.attached_buffers[vim.api.nvim_get_current_buf()] then
             if client.name ~= "null-ls" then
               t[#t + 1] = tostring(client.name)
