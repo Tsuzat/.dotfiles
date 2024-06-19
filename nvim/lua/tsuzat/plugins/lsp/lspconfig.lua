@@ -140,6 +140,7 @@ return {
       "pyright",
       "gopls",
       "svelte",
+      "tailwindcss",
     }
 
     local ops = {
