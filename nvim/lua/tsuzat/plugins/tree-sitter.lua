@@ -14,6 +14,7 @@ return {
   end,
   dependencies = {
     { "windwp/nvim-ts-autotag" },
+    { "p00f/nvim-ts-rainbow" },
     {
       "nvim-treesitter/nvim-treesitter-textobjects",
       config = function()
@@ -49,6 +50,9 @@ return {
     highlight = { enable = true },
     indent = { enable = true },
     autotag = {
+      enable = true,
+    },
+    rainbow = {
       enable = true,
     },
     ensure_installed = {
