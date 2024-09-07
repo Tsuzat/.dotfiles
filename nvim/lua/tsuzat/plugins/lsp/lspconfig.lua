@@ -127,6 +127,16 @@ return {
       },
     }
 
+    -- Need to Exclude the Directory patterns which does not have tailwindcss setup
+    nvim_lsp.tailwindcss.setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      root_dir = function(fname)
+        return require("lspconfig").util.root_pattern("tailwind.config.js", "tailwind.config.cjs", "tailwind.config.ts",
+          "tailwind.config.mjs")(
+          fname)
+      end,
+    }
     -- Servers that needs a simple setup; are provided here.
     local servers = {
       "clangd",
@@ -136,11 +146,12 @@ return {
       "html",
       "emmet_ls",
       "marksman",
-      "tsserver",
+      "ts_ls",
       "pyright",
       "gopls",
       "svelte",
-      "tailwindcss",
+      -- "tailwindcss",
+      "rust_analyzer",
     }
 
     local ops = {
