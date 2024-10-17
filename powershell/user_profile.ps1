@@ -77,6 +77,56 @@ function which ($Command) {
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
+# function to get size of a file or folder in MB
+function Get-Size {
+    param(
+        [Parameter(Mandatory = $true, Position = 0)]
+        [string]$Path
+    )
+
+    if (Test-Path -Path $Path -PathType Leaf) {
+        $fileSize = Get-Item $Path | Select-Object -ExpandProperty Length
+        $fileSizeKB = $fileSize / 1KB
+        $fileSizeMB = $fileSize / 1MB
+        $fileSizeGB = $fileSize / 1GB
+        $fileSizeTB = $fileSize / 1TB
+
+        if ($fileSizeTB -ge 1) {
+            return "{0:F2} TB" -f $fileSizeTB
+        } elseif ($fileSizeGB -ge 1) {
+            return "{0:F2} GB" -f $fileSizeGB
+        } elseif ($fileSizeMB -ge 1) {
+            return "{0:F2} MB" -f $fileSizeMB
+        } elseif ($fileSizeKB -ge 1) {
+            return "{0:F2} KB" -f $fileSizeKB
+        } else {
+            return "{0:F2} bytes" -f $fileSize
+        }
+    } else {
+        $totalSize = 0
+        Get-ChildItem $Path -Recurse | ForEach-Object {
+            $totalSize += $_.Length
+        }
+
+        $totalSizeKB = $totalSize / 1KB
+        $totalSizeMB = $totalSize / 1MB
+        $totalSizeGB = $totalSize / 1GB
+        $totalSizeTB = $totalSize / 1TB
+
+        if ($totalSizeTB -ge 1) {
+            return "{0:F2} TB" -f $totalSizeTB
+        } elseif ($totalSizeGB -ge 1) {
+            return "{0:F2} GB" -f $totalSizeGB
+        } elseif ($totalSizeMB -ge 1) {
+            return "{0:F2} MB" -f $totalSizeMB
+        } elseif ($totalSizeKB -ge 1) {
+            return "{0:F2} KB" -f $totalSizeKB
+        } else {
+            return "{0:F2} bytes" -f $totalSize
+        }
+    }
+}
+
 # Function to make a python project folder with
 # given dir and env name
 function pyProject ($Folder, $Name){
