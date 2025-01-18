@@ -2,10 +2,6 @@
 # Install-Module -Name Terminal-Icons
 Import-Module Terminal-Icons
 
-# `scoop install gsudo`
-# For Elevated Command
-Import-Module gsudoModule
-
 # history of the commands
 # Install-Module -Name PSReadLine
 Import-Module PSReadLine
