@@ -152,6 +152,10 @@ function time ($Command){
   Write-Host "Execution Time: $($executionTime.TotalMilliseconds) milliseconds"
 }
 
+function Update-Scoop {
+  scoop update * && scoop cache rm * && scoop cleanup *
+}
+
 # install scoop-completion
 #`scoop install scoop-completion`
 # enable completion in current shell, use absolute path because PowerShell Core not respect $env:PSModulePath
