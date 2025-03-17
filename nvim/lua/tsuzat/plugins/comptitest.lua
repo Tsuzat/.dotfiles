@@ -98,7 +98,7 @@ return {
       compile_command = {
         c = { exec = "gcc", args = { "-std=c11", "-O3", "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
         cpp = { exec = "g++", args = { "-std=c++14", "-O3", "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
-        go = { exec = "go", args = { "build", "-o", "$(FNOEXT)", "$(FNAME)" } },
+        go = { exec = "go", args = { "build", "$(FNAME)" } },
         rust = { exec = "rustc", args = { "$(FNAME)" } },
       },
       running_directory = ".",

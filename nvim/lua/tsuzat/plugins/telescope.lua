@@ -16,6 +16,9 @@ return {
             n = {
             },
           },
+          file_ignore_patterns = {
+            "node_modules"
+          }
         },
         pickers = {
           -- Default configuration for builtin pickers goes here:
