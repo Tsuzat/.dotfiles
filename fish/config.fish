@@ -102,6 +102,7 @@ alias g="git"
 alias :q="exit"
 alias cls="clear"
 alias v="nvim"
+alias nv="nvim"
 
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
