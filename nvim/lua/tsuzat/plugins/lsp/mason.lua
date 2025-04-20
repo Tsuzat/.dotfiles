@@ -6,9 +6,8 @@ return {
   build = ":Mason",
   cmd = "Mason",
 
-  dependencies = {"williamboman/mason-lspconfig.nvim"},
+  dependencies = { "williamboman/mason-lspconfig.nvim" },
   config = function()
-    
     require("mason").setup()
 
     local status, lspconfig = pcall(require, "mason-lspconfig")
@@ -22,12 +21,10 @@ return {
       "html",
       "cssls",
       "emmet_ls",
-      "marksman",
     }
 
     lspconfig.setup {
       ensure_installed = servers,
     }
-
   end
 }
