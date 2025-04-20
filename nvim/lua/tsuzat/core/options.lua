@@ -44,6 +44,8 @@ local options = {
   updatetime     = 300,   -- faster completion (4000ms default)
   wrap           = false, -- display lines as one long line
   writebackup    = false, -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+
+  statuscolumn   = [[%!v:lua.require'snacks.statuscolumn'.get()]]
 }
 
 vim.opt.shortmess:append "c"
@@ -67,5 +69,4 @@ vim.cmd([[let &t_Cs = "\e[24m"]])
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
-
-vim.opt.statuscolumn = [[%!v:lua.require'tsuzat.core.ui'.statuscolumn()]]
+-- vim.opt.statuscolumn = [[%!v:lua.require'tsuzat.core.ui'.statuscolumn()]]
