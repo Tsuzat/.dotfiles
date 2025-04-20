@@ -1,0 +1,11 @@
+font-family = "FiraCode Nerd Font"
+command = /opt/homebrew/bin/fish --login --interactive
+theme = "Solarized Dark Higher Contrast"
+background = 01131b
+font-size = 18
+cursor-style = bar
+background-opacity = 0.85
+background-blur = 25
+window-height = 25
+window-width = 90
+macos-titlebar-style = tabs
