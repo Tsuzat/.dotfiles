@@ -9,8 +9,9 @@ return {
   },
   {
     "catppuccin/nvim",
-    lazy = false,
-    priority = 1000,
+    lazy = true,
+    event = "VeryLazy",
+    -- priority = 1000,
     config = function()
       require("catppuccin").setup({
         transparent_background = true
