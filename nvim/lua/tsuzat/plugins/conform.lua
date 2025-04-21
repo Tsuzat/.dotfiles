@@ -23,14 +23,24 @@ return {
 
     conform.setup(
       {
-        -- Define your formatters
         formatters_by_ft = {
-          python = { "ruff_format" },
-          javascript = { { "prettierd", "prettier" } },
-          svelte = { { "prettierd", "prettier" } },
+          lua = { "stylua", lsp_format = "fallback" },
+          python = { "isort", "black", stop_after_first = true },
+          rust = { "rustfmt", lsp_format = "fallback" },
+          javascript = { "prettierd", "prettier", stop_after_first = true, lsp_format = "fallback" },
+          svelte = { "prettierd", "prettier", stop_after_first = true, lsp_format = "fallback" },
+          typescript = { "prettierd", "prettier", stop_after_first = true, lsp_format = "fallback" },
+          css = { "prettierd", "prettier", stop_after_first = true, lsp_format = "fallback" },
+          html = { "prettierd", "prettier", stop_after_first = true, lsp_format = "fallback" },
+          json = { "prettierd", "prettier", stop_after_first = true, lsp_format = "fallback" },
+          yaml = { "prettierd", "prettier", stop_after_first = true, lsp_format = "fallback" },
+          markdown = { "prettierd", "prettier", stop_after_first = true, lsp_format = "fallback" },
+          go = { "gofmt", lsp_format = "fallback" },
         },
-        -- Set up format-on-save
-        format_on_save = { timeout_ms = 500, lsp_fallback = true },
+        format_on_save = {
+          timeout_ms = 500,
+          lsp_format = "fallback",
+        },
       }
     )
   end
