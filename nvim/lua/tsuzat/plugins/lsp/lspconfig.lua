@@ -136,11 +136,16 @@ return {
     nvim_lsp.tailwindcss.setup {
       capabilities = capabilities,
       on_attach = on_attach,
-      root_dir = function(fname)
-        return require("lspconfig").util.root_pattern("tailwind.config.js", "tailwind.config.cjs", "tailwind.config.ts",
-          "tailwind.config.mjs")(
-          fname)
-      end,
+      filetypes = {
+        "vue",
+        "html",
+        "astro",
+        "javascript",
+        "typescript",
+        "react",
+        "svelte",
+        "css",
+      },
     }
     -- Servers that needs a simple setup; are provided here.
     local servers = {
