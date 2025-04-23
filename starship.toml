@@ -86,6 +86,9 @@ symbol = "🔴"
 [aws]
 symbol = " "
 
+[bun]
+symbol = " "
+
 [conda]
 symbol = " "
 
