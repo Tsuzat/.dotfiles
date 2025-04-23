@@ -132,21 +132,8 @@ return {
       },
     }
 
+
     -- Need to Exclude the Directory patterns which does not have tailwindcss setup
-    nvim_lsp.tailwindcss.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = {
-        "vue",
-        "html",
-        "astro",
-        "javascript",
-        "typescript",
-        "react",
-        "svelte",
-        "css",
-      },
-    }
     -- Servers that needs a simple setup; are provided here.
     local servers = {
       "clangd",
@@ -160,8 +147,9 @@ return {
       "pyright",
       "gopls",
       "svelte",
-      -- "tailwindcss",
+      "tailwindcss",
       "rust_analyzer",
+      "sourcekit"
     }
 
     local ops = {
