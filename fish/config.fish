@@ -104,13 +104,8 @@ alias cls="clear"
 alias v="nvim"
 alias nv="nvim"
 
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 ## Starship prompt
 if status --is-interactive
-   source ("/opt/homebrew/bin/starship" init fish --print-full-init | psub)
+   source ("starship" init fish --print-full-init | psub)
 end
 
