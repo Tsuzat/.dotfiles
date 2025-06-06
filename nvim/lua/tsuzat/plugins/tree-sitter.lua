@@ -4,7 +4,7 @@ return {
     build = ":TSUpdate",
     event = "VeryLazy",
     lazy = vim.fn.argc(-1) == 0,
-    init = function(plugin)
+    init = function()
       require("nvim-treesitter.query_predicates")
     end,
     cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
